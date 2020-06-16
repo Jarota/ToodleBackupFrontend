@@ -1,0 +1,35 @@
+a {
+    text-decoration: none;
+}
+
+a h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    padding: 0;
+    margin: 0;
+    display: inline;
+    color: #2073b8;
+}
+
+nav {
+    display: inline;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    padding: 0;
+    margin: 0px;
+    float: right;
+    text-align: center;
+    color: white;
+    background-color: #2073b8;
+    padding: 0.2em;
+    border-radius: 10%;
+
+    transition: background-color 0.2s ease-in-out;
+}
+nav a:hover {
+    background-color: #5bc0eb;
+}

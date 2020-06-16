@@ -1,0 +1,35 @@
+.brief {
+    width: 50%;
+    margin: 5% 0 0 0;
+    float: left;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 4em;
+    margin: 0;
+    padding: 0;
+    color: #272932;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    margin: 1em 0 0;
+    color: #2073b8;
+}
+
+.create {
+    float: right;
+    width: 50%;
+    margin: 5% 0 0 0;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #de9927;
+}
