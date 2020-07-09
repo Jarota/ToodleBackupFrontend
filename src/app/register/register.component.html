@@ -1,0 +1,12 @@
+<form>
+    <label>Username</label>
+    <br>
+    <input [(ngModel)]="creds.username" name="username">
+    <br>
+    <label>Password</label>
+    <br>
+    <input [(ngModel)]="creds.password" name="password" type="password">
+    <br>
+
+    <button class="button-primary" (click)="register()">Register</button>
+</form>

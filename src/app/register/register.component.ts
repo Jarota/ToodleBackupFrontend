@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService, Credentials } from "../user.service";
 import { Router } from '@angular/router';
-import { UserService, Credentials } from '../user.service';
+
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
 })
-export class LoginComponent implements OnInit {
+export class RegisterComponent implements OnInit {
 
   creds: Credentials;
 
@@ -17,8 +18,8 @@ export class LoginComponent implements OnInit {
     this.creds = { username: "", password: "" };
   }
 
-  login() {
-    this.userService.loginUser(this.creds);
+  register() {
+    this.userService.registerUser(this.creds);
   }
 
 }

@@ -1,17 +1,5 @@
-h1, label, input, button {
+label, input, button {
     font-family: 'Roboto', sans-serif;
-}
-
-h1 {
-    font-size: 4em;
-    padding: 0;
-    margin: 5% 0;
-    color: black;
-    text-align: center;
-}
-
-.loginForm {
-    text-align: center;
 }
 
 label {

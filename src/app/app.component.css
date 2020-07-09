@@ -26,10 +26,13 @@ nav a {
     color: white;
     background-color: #2073b8;
     padding: 0.2em;
+
+    border: 2px solid #2073b8;
     border-radius: 10%;
 
-    transition: background-color 0.2s ease-in-out;
+    transition-duration: 0.4s;
 }
 nav a:hover {
-    background-color: #5bc0eb;
+    color: black;
+    background-color: white;
 }
