@@ -16,13 +16,16 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
 
     this.user = {
-      name: "",
+      username: "",
       frequency: "",
-      toBackup: []
+      toodledo: {token: "", toBackup: []},
+      clouds: [],
     };
 
-    this.userService.getUser().subscribe( (u: User) => {
-      this.user = u;
+    this.userService.getUser().subscribe( (response: any) => {
+      console.log(response);
+      
+      this.user = response;
     });
   }
 

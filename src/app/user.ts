@@ -1,5 +1,8 @@
+import { CloudService, ToodleInfo } from './user.service';
+
 export class User {
-    name: string;
+    username: string;
     frequency: string;
-    toBackup: string[];
+    toodledo: ToodleInfo;
+    clouds: CloudService[];
 }
