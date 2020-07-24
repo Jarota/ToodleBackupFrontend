@@ -5,6 +5,8 @@ div {
 h1 {
     font-family: 'Roboto', sans-serif;
     font-size: 3em;
+    font-weight: normal;
+    color: #272932;
     margin: 1em 0 1em 0;
     padding: 0;
 }
@@ -18,7 +20,7 @@ h1 {
     background: #de9927;
     
     border: 2px solid #de9927;
-    border-radius: 10%;
+    border-radius: 15px;
 
     user-select: none;
 

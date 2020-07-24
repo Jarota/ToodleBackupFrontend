@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConnectToodledoComponent implements OnInit {
 
+  tasks: Boolean;
+  lists: Boolean;
+  notes: Boolean;
+  outlines: Boolean;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.tasks = false;
+    this.lists = false;
+    this.notes = false;
+    this.outlines = false;
+  }
+
+  redirectToToodledo() {
+    
   }
 
 }

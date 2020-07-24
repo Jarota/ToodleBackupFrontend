@@ -1,1 +1,30 @@
-<p>connect-toodledo works!</p>
+<div class="main">
+    <div class="desc">
+        <h1>Connect Toodledo</h1>
+        <h2>Tick the categories that you want to be backed up.</h2>
+
+        <div class="buttonContainer"><button (click)="redirectToToodledo()">Connect</button></div>
+        
+    </div>
+    
+    <div class="list">
+        <ul>
+            <li>
+                <input type="checkbox" name="tasks" [(ngModel)]="tasks">
+                <label for="tasks">Tasks</label>
+            </li>
+            <li>
+                <input type="checkbox" name="lists" [(ngModel)]="lists">
+                <label for="lists">Lists</label>
+            </li>
+            <li>
+                <input type="checkbox" name="notes" [(ngModel)]="notes">
+                <label for="Notes">Notes</label>
+            </li>
+            <li>
+                <input type="checkbox" name="outlines" [(ngModel)]="outlines">
+                <label for="outlines">Outlines</label>
+            </li>
+        </ul>
+    </div>
+</div>
