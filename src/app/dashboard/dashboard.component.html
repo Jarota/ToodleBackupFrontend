@@ -1,3 +1,6 @@
 <div>
-    <h1>{{user.username}}</h1>
+    <h1>Dashboard: {{user.username}}</h1>
+    <div *ngIf="connectToodledo">
+        <button class="card" (click)="goToConnectToodledo()">Connect Toodledo</button>
+    </div>
 </div>

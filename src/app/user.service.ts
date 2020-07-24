@@ -108,6 +108,7 @@ export class Credentials {
 
 export class ToodleInfo {
   token: string;
+  refresh: string;
   toBackup: string[];
 }
 

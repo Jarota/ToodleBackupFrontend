@@ -1,0 +1,32 @@
+div {
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3em;
+    margin: 1em 0 1em 0;
+    padding: 0;
+}
+
+.card {
+    font-size: 1.5em;
+    margin: 0;
+    padding: 3em 2em;
+    
+    color: white;
+    background: #de9927;
+    
+    border: 2px solid #de9927;
+    border-radius: 10%;
+
+    user-select: none;
+
+    transition-duration: 0.4s;
+}
+
+.card:hover {
+    cursor: pointer;
+    color: #de9927;
+    background-color: white;
+}
