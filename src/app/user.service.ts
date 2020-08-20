@@ -66,14 +66,14 @@ export class UserService {
     
   }
 
-  connToodledo(info: ToodleInfo) {
+  connToodledo(code: string) {
 
     const header = this.getAuthHeader();
 
     return this.http.put(environment.gateway + '/connToodledo', {
-      body: info,
+      body: code,
       headers: header,
-    }).subscribe( () => {} );
+    });
 
   }
 
@@ -97,6 +97,14 @@ export class UserService {
       headers: header,
     }).subscribe( () => {} );
     
+  }
+
+  getRandomString() {
+    
+    const header = this.getAuthHeader();
+
+    return this.http.get(environment.gateway + '/randomString', {headers: header});
+  
   }
 
 }

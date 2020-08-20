@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterComponent } from './register/register.component';
 import { ConnectToodledoComponent } from './connect-toodledo/connect-toodledo.component';
+import { ToodleredirectComponent } from './toodleredirect/toodleredirect.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ConnectToodledoComponent } from './connect-toodledo/connect-toodledo.co
     HomeComponent,
     DashboardComponent,
     RegisterComponent,
-    ConnectToodledoComponent
+    ConnectToodledoComponent,
+    ToodleredirectComponent
   ],
   imports: [
     BrowserModule,

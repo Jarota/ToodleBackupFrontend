@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-connect-toodledo',
@@ -12,7 +13,7 @@ export class ConnectToodledoComponent implements OnInit {
   notes: Boolean;
   outlines: Boolean;
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
     this.tasks = false;
@@ -23,6 +24,30 @@ export class ConnectToodledoComponent implements OnInit {
 
   redirectToToodledo() {
     
+    var bools: Boolean[] = [this.tasks, this.lists, this.notes, this.outlines];
+    var strings: string[] = ["tasks", "lists", "notes", "outlines"];
+
+    this.userService.getRandomString().subscribe(
+      (resp: any) => {
+        var url: string = "https://api.toodledo.com/3/account/authorize.php?response_type=code&client_id=toodlebackup&state=" + resp.state +"&scope=";
+    
+        var first: Boolean = true;
+        
+        for( let i = 0; i < 4; i++) {
+          if( bools[i] === true ) {
+            if(first === true) {
+              url += strings[i];
+              first = false;
+            } else {
+              url += "%20" + strings[i];
+            }
+          }
+        }
+        // console.log(url);
+        window.location.href = url;
+      }
+    )
+
   }
 
 }
