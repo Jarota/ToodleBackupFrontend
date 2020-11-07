@@ -43,7 +43,6 @@ export class ConnectToodledoComponent implements OnInit {
             }
           }
         }
-        // console.log(url);
         window.location.href = url;
       }
     )

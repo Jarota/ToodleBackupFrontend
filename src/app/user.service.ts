@@ -8,9 +8,6 @@ import { Router } from '@angular/router';
 })
 export class UserService {
 
-  private loggedIn = false;
-  private token: string;
-
   constructor(private http: HttpClient, private router: Router) { }
 
   registerUser(creds: Credentials) {
@@ -19,9 +16,7 @@ export class UserService {
       
       if (response.token !== undefined) {
         
-        this.setLoggedIn(true, response.token);
-
-        const userData = { token: this.token, };
+        const userData = { token: response.token, };
 
         localStorage.setItem('user', JSON.stringify(userData));
         this.router.navigateByUrl('/dashboard');
@@ -35,10 +30,8 @@ export class UserService {
     return this.http.post(environment.gateway + '/login', creds).subscribe( (response: any) => {
 
       if (response.token !== undefined) {
-        
-        this.setLoggedIn(true, response.token);
 
-        const userData = { token: this.token, };
+        const userData = { token: response.token, };
 
         localStorage.setItem('user', JSON.stringify(userData));
         this.router.navigateByUrl('/dashboard');
@@ -48,20 +41,16 @@ export class UserService {
 
   }
 
-  setLoggedIn(loggedIn: boolean, token?: string) {
-    this.loggedIn = loggedIn;
-    this.token = token;
-  }
-
   getAuthHeader() {
-    const header = this.loggedIn ? { Authorization: `Bearer ${this.token}` } : undefined;
-    return header;
+
+    const token = JSON.parse(localStorage.getItem('user')).token;
+    return { Authorization: `Bearer ${token}` };
+    
   }
 
   getUser() {
 
     const header = this.getAuthHeader();
-
     return this.http.get(environment.gateway + '/getUser', {headers: header});
     
   }

@@ -11,6 +11,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterComponent } from './register/register.component';
 import { ConnectToodledoComponent } from './connect-toodledo/connect-toodledo.component';
 import { ToodleredirectComponent } from './toodleredirect/toodleredirect.component';
+import { ConnectDropboxComponent } from './connect-dropbox/connect-dropbox.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ToodleredirectComponent } from './toodleredirect/toodleredirect.compone
     DashboardComponent,
     RegisterComponent,
     ConnectToodledoComponent,
-    ToodleredirectComponent
+    ToodleredirectComponent,
+    ConnectDropboxComponent
   ],
   imports: [
     BrowserModule,
