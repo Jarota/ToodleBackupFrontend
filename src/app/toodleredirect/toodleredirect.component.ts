@@ -9,17 +9,11 @@ import { UserService } from '../user.service';
 })
 export class ToodleredirectComponent implements OnInit {
 
-  code: string;
-
   constructor(private route: ActivatedRoute, private router: Router, private userService: UserService) { }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe( (params) => {
-      this.code = params['code'];
-
-      this.userService.connToodledo(this.code).subscribe( () => {
-        this.router.navigateByUrl('/dashboard');
-      });
+      this.userService.connToodledo(params['code'])
     });
   }
 

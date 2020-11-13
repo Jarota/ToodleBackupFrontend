@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent } from "./home/home.component";
-import { LoginComponent } from "./login/login.component";
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ConnectToodledoComponent } from './connect-toodledo/connect-toodledo.component';
 import { ToodleredirectComponent } from './toodleredirect/toodleredirect.component';

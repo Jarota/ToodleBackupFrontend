@@ -59,9 +59,8 @@ export class UserService {
 
     const header = this.getAuthHeader();
 
-    return this.http.put(environment.gateway + '/connToodledo', {
-      body: code,
-      headers: header,
+    return this.http.put(environment.gateway + '/connToodledo', {body: code}, {headers: header}).subscribe( () => {
+      this.router.navigateByUrl('/dashboard');
     });
 
   }
@@ -70,10 +69,7 @@ export class UserService {
 
     const header = this.getAuthHeader();
 
-    return this.http.put(environment.gateway + '/connCloudStorage', {
-      body: cloud,
-      headers: header,
-    }).subscribe( () => {} );
+    return this.http.put(environment.gateway + '/connCloudStorage', {body: cloud}, {headers: header}).subscribe( () => {} );
 
   }
 
@@ -81,10 +77,8 @@ export class UserService {
 
     const header = this.getAuthHeader();
 
-    return this.http.put(environment.gateway + '/setBackupFrequency', {
-      body: freq,
-      headers: header,
-    }).subscribe( () => {} );
+    return this.http.put(environment.gateway + '/setBackupFrequency', {body: freq}, {headers: header})
+      .subscribe( () => {} );
     
   }
 
