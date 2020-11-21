@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  gateway: 'http://localhost:8080/api',
-  callback: 'http://localhost:8080/callback',
+  gateway: 'https://localhost:8080/api',
+  callback: 'https://localhost:8080/callback',
 };
 
 /*
