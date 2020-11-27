@@ -1,3 +1,7 @@
-<div>
+<div *ngIf="!code">
     <h1>Connecting Toodledo to ToodleBackup...</h1>
+</div>
+<div *ngIf="code">
+    <h1>Connected!</h1>
+    <a routerLink="/dashboard">Return To Dashboard</a>
 </div>

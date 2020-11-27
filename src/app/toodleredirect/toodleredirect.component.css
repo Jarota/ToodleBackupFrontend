@@ -6,3 +6,26 @@ div {
 h1 {
     font-family: 'Roboto', sans-serif;
 }
+
+a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    padding: 0;
+    margin: 0px;
+    text-align: center;
+    color: white;
+    background-color: #de9927;
+    padding: 0.2em;
+
+    border: 2px solid #de9927;
+
+    user-select: none;
+
+    transition-duration: 0.4s;
+}
+
+a:hover {
+    color: #de9927;
+    background-color: white;
+}

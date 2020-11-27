@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { UserService } from '../user.service';
+import { UserService, Code } from '../user.service';
+
 
 @Component({
   selector: 'app-toodleredirect',
@@ -9,12 +10,19 @@ import { UserService } from '../user.service';
 })
 export class ToodleredirectComponent implements OnInit {
 
+  code: Code;
+
   constructor(private route: ActivatedRoute, private router: Router, private userService: UserService) { }
 
   ngOnInit(): void {
-    this.route.queryParams.subscribe( (params) => {
-      this.userService.connToodledo(params['code'])
+    this.route.queryParamMap
+      .subscribe( (map) => {
+        this.code = { value: map.get("code") };
+        if (this.code) {
+          this.userService.connToodledo(this.code).subscribe(() => {});
+        }
     });
   }
 
 }
+
