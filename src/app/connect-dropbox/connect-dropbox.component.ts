@@ -14,6 +14,13 @@ export class ConnectDropboxComponent implements OnInit {
   }
 
   redirectToDropbox() {
+
+    var path = "https://www.dropbox.com/oauth2/authorize?";
+    var client_id = "client_id=n731o7jng2knpkq&";
+    var redirect_uri = "redirect_uri=https://localhost:8080/dropboxredirect&";
+    
+    var url: string = path + client_id + redirect_uri + "response_type=code";
+    window.location.href = url;
     
   }
 
