@@ -11,6 +11,15 @@ h1 {
     padding: 0;
 }
 
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    font-weight: normal;
+    color: #272932;
+    margin: 1em 0 1em 0;
+    padding: 3em 2em;
+}
+
 .card {
     font-size: 1.5em;
     margin: 1em 0;

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../user.service';
+import { environment } from "../../environments/environment";
 
 @Component({
   selector: 'app-connect-dropbox',
@@ -8,18 +8,21 @@ import { UserService } from '../user.service';
 })
 export class ConnectDropboxComponent implements OnInit {
 
-  constructor(private userService: UserService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
 
   redirectToDropbox() {
 
-    var path = "https://www.dropbox.com/oauth2/authorize?";
-    var client_id = "client_id=n731o7jng2knpkq&";
-    var redirect_uri = "redirect_uri=https://localhost:8080/dropboxredirect&";
+    const path = "https://www.dropbox.com/oauth2/authorize?";
+    const client_id = "client_id=n731o7jng2knpkq&";
+    const redirect_uri = "redirect_uri=" + environment.gateway.slice(0, -4) + "/dropboxredirect&";
+    // const redirect_uri = "redirect_uri=https://localhost:8080/dropboxredirect&";
+    const response_type = "response_type=code&";
+    const token_access_type = "token_access_type=offline";
     
-    var url: string = path + client_id + redirect_uri + "response_type=code";
+    const url: string = path + client_id + redirect_uri + response_type + token_access_type;
     window.location.href = url;
     
   }

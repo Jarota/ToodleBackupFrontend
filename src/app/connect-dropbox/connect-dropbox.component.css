@@ -1,0 +1,52 @@
+.main {
+    margin-left: 25%;
+    margin-top: 5%;
+    font-family: Roboto;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+    padding: 0;
+    color: #272932;
+}
+
+h2 {
+    font-weight: normal;
+    color: #2073b8;
+}
+
+.buttonContainer {
+    text-align: center;
+}
+
+button {
+    color: white;
+    background-color: #de9927;
+    border: 2px solid #de9927;
+    padding: 0.25em 1em;
+    margin-top: 1em;
+    
+    text-decoration: none;
+    font-size: 1.5em;
+
+    user-select: none;
+
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    cursor: pointer;
+    color: #de9927;
+    background-color: white;
+}
+
+label {
+    font-size: 2em;
+    padding: 0 0 0 2em;
+}
+
+input {
+    width: 2em;
+    height: 2em;
+}

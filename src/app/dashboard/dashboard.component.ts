@@ -31,7 +31,7 @@ export class DashboardComponent implements OnInit {
     this.userService.getUser().subscribe( (response: any) => {      
       this.user = response;
 
-      this.connectToodledo = this.user.toodledo.token == "";
+      this.connectToodledo = this.user.toodledo.token === "";
       this.connectDropbox = this.user.clouds.length === 0;
 
     });
@@ -43,7 +43,7 @@ export class DashboardComponent implements OnInit {
   }
 
   goToConnectDropbox() {
-    this.router.navigateByUrl('/connectDropbox')
+    this.router.navigateByUrl('/connectDropbox');
   }
 
 }

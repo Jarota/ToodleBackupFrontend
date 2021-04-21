@@ -63,11 +63,11 @@ export class UserService {
 
   }
 
-  connCloudStorage(cloud: CloudService) {
+  connDropbox(code: Code) {
 
     const header = this.getAuthHeader();
 
-    return this.http.put(environment.gateway + '/connCloudStorage', cloud, {headers: header}).subscribe( () => {} );
+    return this.http.put(environment.gateway + '/connDropbox', code, {headers: header});
 
   }
 

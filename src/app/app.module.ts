@@ -12,6 +12,7 @@ import { RegisterComponent } from './register/register.component';
 import { ConnectToodledoComponent } from './connect-toodledo/connect-toodledo.component';
 import { ToodleredirectComponent } from './toodleredirect/toodleredirect.component';
 import { ConnectDropboxComponent } from './connect-dropbox/connect-dropbox.component';
+import { DropboxredirectComponent } from './dropboxredirect/dropboxredirect.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ConnectDropboxComponent } from './connect-dropbox/connect-dropbox.compo
     RegisterComponent,
     ConnectToodledoComponent,
     ToodleredirectComponent,
-    ConnectDropboxComponent
+    ConnectDropboxComponent,
+    DropboxredirectComponent
   ],
   imports: [
     BrowserModule,

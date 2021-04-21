@@ -24,14 +24,14 @@ export class ConnectToodledoComponent implements OnInit {
 
   redirectToToodledo() {
     
-    var bools: Boolean[] = [this.tasks, this.lists, this.notes, this.outlines];
-    var strings: string[] = ["tasks", "lists", "notes", "outlines"];
+    let bools: Boolean[] = [this.tasks, this.lists, this.notes, this.outlines];
+    const strings: string[] = ["tasks", "lists", "notes", "outlines"];
 
     this.userService.getRandomString().subscribe(
       (resp: any) => {
-        var url: string = "https://api.toodledo.com/3/account/authorize.php?response_type=code&client_id=toodlebackup&state=" + resp.state +"&scope=";
+        let url: string = "https://api.toodledo.com/3/account/authorize.php?response_type=code&client_id=toodlebackup&state=" + resp.state +"&scope=";
     
-        var first: Boolean = true;
+        let first: Boolean = true;
         
         for( let i = 0; i < 4; i++) {
           if( bools[i] === true ) {
