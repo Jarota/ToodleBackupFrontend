@@ -6,4 +6,7 @@
     <div *ngIf="connectDropbox">
         <button class="card" (click)="goToConnectDropbox()">Connect Dropbox</button>
     </div>
+    <div *ngIf="!connectToodledo&&!connectDropbox">
+        <h2>You're all set!</h2>
+    </div>
 </div>

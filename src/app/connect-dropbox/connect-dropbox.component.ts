@@ -18,7 +18,6 @@ export class ConnectDropboxComponent implements OnInit {
     const path = "https://www.dropbox.com/oauth2/authorize?";
     const client_id = "client_id=n731o7jng2knpkq&";
     const redirect_uri = "redirect_uri=" + environment.gateway.slice(0, -4) + "/dropboxredirect&";
-    // const redirect_uri = "redirect_uri=https://localhost:8080/dropboxredirect&";
     const response_type = "response_type=code&";
     const token_access_type = "token_access_type=offline";
     
