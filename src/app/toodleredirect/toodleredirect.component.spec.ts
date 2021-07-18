@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { ToodleredirectComponent } from './toodleredirect.component';
 
@@ -6,7 +6,7 @@ describe('ToodleredirectComponent', () => {
   let component: ToodleredirectComponent;
   let fixture: ComponentFixture<ToodleredirectComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ ToodleredirectComponent ]
     })
